@@ -1,5 +1,28 @@
 {
+  "name": "scanner-listener",
+  "version": "1.0.0",
+  "description": "A standalone listener for USB barcode scanners.",
+  "author": "Pavel Gulaev",
+  "license": "MIT",
+  "main": "secret-listener.js",
+  "bin": "secret-listener.js",
+  "scripts": {
+    "start": "node secret-listener.js",
+    "build-exe": "pkg ."
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/rustcatch/build/Release/addon.node"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  },
   "dependencies": {
-    "rustcatch": "^0.3.2"
+    "rustcatch": "^0.3.3"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
   }
 }
