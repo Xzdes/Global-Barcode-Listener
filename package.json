@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "rustcatch": "^0.3.2"
+  }
+}
